@@ -1,0 +1,296 @@
+/* CSS (styles.css) - Estilos Morado y Blanco */
+
+:root {
+    --color-principal: #6A1B9A; /* Morado Profundo (Acento y CTA) */
+    --color-secundario: #E1BEE7; /* Lila Claro (Fondo de Tarjetas/Acordeón) */
+    --color-acento: #4A148C; /* Morado Más Oscuro (Interactivo/Encabezados) */
+    --color-fondo: #FDFEFE; /* Blanco Roto/Claro (Fondo principal) */
+    --color-texto: #333333; /* Gris Oscuro para Texto (Alta Legibilidad) */
+    --sombra-box: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2.5em; 
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.content-box {
+    background-color: var(--color-fondo);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--sombra-box);
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: var(--color-acento);
+    border-bottom: 2px solid var(--color-secundario);
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.9em;
+}
+
+/* Estilo para la nueva sección de Bibliografía */
+.bibliografia ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.bibliografia li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    border-left: 3px solid var(--color-secundario);
+}
+
+.bibliografia li a {
+    color: var(--color-principal);
+    text-decoration: none;
+}
+
+.bibliografia li a:hover {
+    text-decoration: underline;
+}
+/* Fin de Estilo para Bibliografía */
+
+
+/* Diseño de Tarjetas Flexible */
+.card-container, .lsm-feature-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center; /* Asegura que si hay menos de 2 tarjetas, se centren */
+}
+
+.info-card, .lsm-feature {
+    background-color: var(--color-secundario);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; 
+}
+
+.info-card:hover, .lsm-feature:hover {
+    transform: translateY(-5px); /* Animación al pasar el mouse */
+    box-shadow: 0 8px 15px rgba(74, 20, 140, 0.2);
+}
+
+.identity-card {
+    border: 2px solid var(--color-principal); /* Destacar la identidad cultural */
+}
+
+/* Estilos de Botones */
+button {
+   display: block; /* Necesario para aplicar ancho/márgenes a un enlace */
+    width: fit-content; /* Ajusta el ancho al contenido */
+    margin: 20px auto; /* Centra el botón horizontalmente y le da espacio */
+    
+    background-color: var(--color-principal); /* Mismo color de fondo que 'button' */
+    color: white; /* Mismo color de texto que 'button' */
+    
+    padding: 12px 25px; /* Mismo relleno que 'button' */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none; /* Quitamos el subrayado de enlace */
+    
+    transition: background-color 0.3s ease;
+    font-size: 1;
+}
+
+button:hover {
+    background-color: var(--color-acento);
+}
+
+/* --- MODIFICACIÓN SOLICITADA: Estilo de botón para el enlace '.cta-lsm' --- */
+.cta-lsm {
+    display: block; /* Necesario para aplicar ancho/márgenes a un enlace */
+    width: fit-content; /* Ajusta el ancho al contenido */
+    margin: 20px auto; /* Centra el botón horizontalmente y le da espacio */
+    
+    background-color: var(--color-principal); /* Mismo color de fondo que 'button' */
+    color: white; /* Mismo color de texto que 'button' */
+    
+    padding: 12px 25px; /* Mismo relleno que 'button' */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none; /* Quitamos el subrayado de enlace */
+    
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+.cta-lsm:hover {
+    background-color: var(--color-acento); /* Mismo efecto de hover que 'button' */
+}
+/* ------------------------------------------------------------------------ */
+
+
+.recursos-cta a {
+    color: var(--color-principal);
+    font-weight: bold;
+    text-decoration: none;
+}
+.recursos-cta a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: var(--color-acento);
+    color: var(--color-fondo);
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+/* ACORDEÓN (FAQ) - Estilos para la animación con JS */
+.accordion-item {
+    border: 1px solid var(--color-secundario);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+    padding: 15px 20px;
+    font-size: 1.1em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+    background-color: #D3C1D8; 
+}
+
+.accordion-content {
+    background-color: white;
+    padding: 0 20px;
+    max-height: 0; /* CLAVE para el efecto de despliegue animado */
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+/* Estilo para contenido que se despliega con el botón */
+.expanded-content {
+    max-height: 0; /* Inicialmente oculto */
+    overflow: hidden;
+    padding: 0 30px;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+/* Clase que JS eliminará para mostrar la sección de Causas */
+.hidden {
+    max-height: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.expanded-content.show {
+    max-height: 800px; 
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* Estilo para el Índice de Anclas */
+.indice-anclas {
+    background-color: var(--color-secundario);
+    border-bottom: 1px solid var(--color-principal);
+    padding: 15px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.indice-anclas h2 {
+    font-size: 1.1em;
+    color: var(--color-acento);
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: none; 
+    padding-bottom: 0;
+}
+
+.indice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.indice-list li {
+    margin: 0 10px 5px;
+}
+
+.indice-list a {
+    text-decoration: none;
+    color: var(--color-principal);
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.indice-list a:hover {
+    background-color: #d3c1d8;
+    color: var(--color-acento);
+}
+.cita-visible {
+    margin-top: 10px;
+    padding: 8px;
+    background: #f3f3f3;
+    border-left: 4px solid #555;
+    font-size: 0.9em;
+}
+
+.cita-morada {
+    display: block;
+    margin-top: 12px;
+    padding: 12px 18px;
+    background-color: #5b20a8;
+    color: white;
+    border-radius: 10px;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.cita-morada a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: underline;
+}

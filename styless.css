@@ -1,0 +1,145 @@
+/* --- Variables de Color (Morado Profundo) --- */
+:root {
+    --color-principal: #6A1B9A; /* Morado Profundo (Acento y CTA) */
+    --color-secundario: #E1BEE7; /* Lila Claro (Fondo de Tarjetas/Acordeón) */
+    --color-acento: #4A148C; /* Morado Más Oscuro (Interactivo/Encabezados) */
+    --color-fondo: #FDFEFE; /* Blanco Roto/Claro (Fondo principal) */
+    --color-texto: #333333; /* Gris Oscuro para Texto (Alta Legibilidad) */
+    --sombra-box: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilos Generales --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* --- Header Principal (Barra Superior Fija y de Ancho Completo) --- */
+.main-header {
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    padding: 15px 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.site-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* --- Contenido Principal (Centrado) --- */
+.main-body-content {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 90%; 
+    box-sizing: border-box;
+    padding: 80px 0 20px 0; /* Espacio para el header fijo */
+}
+
+main {
+    padding: 0 20px;
+}
+
+/* --- Estilos de Título Principal y Cajas de Contenido --- */
+.main-title-header {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: var(--sombra-box);
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 300;
+    margin-bottom: 5px;
+    color: var(--color-acento); 
+}
+
+.content-box {
+    background-color: var(--color-fondo);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--sombra-box);
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: var(--color-acento);
+    border-bottom: 2px solid var(--color-secundario);
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.9em;
+}
+
+/* --- Estilos para la lista de recursos (video-list) --- */
+.video-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.video-list li {
+    background-color: var(--color-secundario); 
+    border: 1px solid var(--color-principal); 
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.video-list li a {
+    color: white; 
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--color-principal); 
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.video-list li a:hover {
+    background-color: var(--color-acento); 
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--color-acento);
+    color: var(--color-fondo);
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+/* Estilo para el botón de regreso a Index */
+.cta-lsm {
+    background-color: var(--color-acento); /* Morado Más Oscuro */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    display: inline-block; /* Para que funcione el padding y el tamaño */
+    text-decoration: none; /* Quitar el subrayado del enlace */
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-lsm:hover {
+    background-color: var(--color-principal); /* Morado Profundo al pasar el mouse */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
